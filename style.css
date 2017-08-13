@@ -1,0 +1,166 @@
+.grid > div {
+  border: 2px solid rgb(233,171,88);
+  border-radius: 5px;
+  background-color: rgba(233,171,88,.5);
+  padding: 1em;
+  color: #d9480f;
+}
+.nav a{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+IMG.cdprlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topnav {
+  font-family: 'Inconsolata', monospace;
+  position: relative;
+  display: table;
+  width: 100%;
+  margin: 0 auto; 
+  vertical-align: middle;
+  height: 50px;
+  background-color: lightgray;
+}
+
+.topnav a {
+    display: table-cell;
+    padding: 0px 50px; 
+    vertical-align: middle;
+}
+.tempMenu {
+    display: none;
+}
+.sticky
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+@supports (grid-auto-rows: 1px)
+{
+  .grid {
+      display: grid;
+      grid-template-columns: 1fr
+      grid-gap: 20px;
+      grid-auto-rows: minmax(500px, auto);   
+    }
+
+    .one {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .two { 
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .three {
+      grid-column: 1;
+      grid-row: 3;
+    }
+    .four {
+      grid-column: 1;
+      grid-row: 4;
+    }
+    .five {
+      grid-column: 1;
+      grid-row: 5;
+    }
+    .six {
+      grid-column: 1;
+      grid-row: 6;
+    }  
+}
+body {margin:0;}
+
+nav,
+.navbar-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+nav {
+  position: fixed;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+  color: white;
+}
+
+.nav-hide { display: none; }
+
+nav ul {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 0 !important;
+}
+
+nav ul li { list-style: none; }
+
+nav ul li a {
+  font-size: 35pt;
+  color: inherit;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.navbar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 100%;
+  height: 8px;
+  margin-bottom: 5px;
+  background-color: #1c1f72;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-on .bar1,
+.navbar-on .bar2,
+.navbar-on .bar3 { background-color: white; }
+
+.navbar-on .bar1 {
+  transform-origin: 1% 75%;
+  transform: rotate(45deg);
+}
+
+.navbar-on .bar3 {
+  transform-origin: 10% 40%;
+  transform: rotate(-45deg);
+}
+
+.navbar-on .bar2 { background-color: transparent; }
+
+@media only screen and (min-width: 600px)
+{
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    #menu {
+        display: none;
+    }
+}
